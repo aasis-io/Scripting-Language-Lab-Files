@@ -1,0 +1,48 @@
+<!-- What are the Event Handlers in JavaScript? write code for different types of event. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event Handlers</h1>
+    <button id="clickBtn">Click me</button>
+    <p id="clickOutput"></p>
+
+    <input type="text" id="inputField" placeholder="Type something">
+    <p id="inputOutput"></p>
+
+    <div id="box"></div>
+
+    <script>
+        document.getElementById('clickBtn').addEventListener('click', function () {
+            document.getElementById('clickOutput').textContent = 'Button clicked!';
+        });
+        document.getElementById('inputField').addEventListener('input', function (event) {
+            document.getElementById('inputOutput').textContent = 'Input changed: ' + event.target.value;
+        });
+
+        var box = document.getElementById('box');
+        box.addEventListener('mouseover', function (event) {
+            box.style.backgroundColor = "red";
+        });
+        box.addEventListener('mouseout', function (event) {
+            box.style.backgroundColor = "blue";
+        });
+
+    </script>
+</body>
+
+</html>

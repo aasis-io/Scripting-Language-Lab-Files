@@ -1,0 +1,26 @@
+<!-- Demonstrate the use of setTimeout() method to display text after 2 seconds -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display Text After 2 Seconds</title>
+</head>
+
+<body>
+
+    <p id="message"></p>
+
+    <script>
+        function displayText() {
+            var messageElement = document.getElementById("message");
+            setTimeout(function () {
+                messageElement.textContent = "This text was displayed after 2 seconds.";
+            }, 2000);
+        }
+        displayText();
+    </script>
+
+</body>
+
+</html>

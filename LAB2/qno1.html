@@ -1,0 +1,28 @@
+<!-- Write a javascript program to display confirmation message using dialog box -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Message</title>
+    <script>
+        function displayConfirmation() {
+            var result = confirm("Are you sure you want to proceed?");
+            if (result) {
+                alert("Confirmed! Proceeding...");
+            } else {
+                alert("Cancelled.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="displayConfirmation()">Click Me</button>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!-- Write a program to validate email using Regular Expression -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <script>
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value.trim();
+
+            if (validateEmail(email)) {
+                alert('Valid email!');
+            } else {
+                alert('Invalid email!');
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <form onsubmit="handleSubmit(event)">
+        <label for="email">Enter your email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

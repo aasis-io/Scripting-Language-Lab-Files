@@ -1,0 +1,35 @@
+<!-- Write a JavaScript code to update the content of div using innerHTML -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Update Content of DIV</title>
+</head>
+
+<body>
+    <div id="content">Hello World!</div>
+    <button onclick="updateContent()">Update Content</button>
+
+    <script>
+
+
+        function updateContent() {
+            var myDiv = document.getElementById("content");
+
+            var oldContent = myDiv.innerHTML;
+
+            document.write("This is Old Content: " + oldContent);
+
+            myDiv.innerHTML = "<br>" + "New Content!";
+
+            document.write(myDiv.innerHTML);
+
+
+        }
+    </script>
+</body>
+
+</html>

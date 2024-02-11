@@ -1,0 +1,29 @@
+<!-- Write a JavaScript code to increment the value by one on button click -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="numberIn">1</div>
+    <button onclick="incrementValue()">Increase Value By 1</button>
+
+    <script>
+        var number = document.getElementById("numberIn");
+
+        console.log(typeof (number.innerHTML));
+
+        function incrementValue() {
+            number.innerHTML = parseInt(number.innerHTML) + 1;
+        }
+
+    </script>
+</body>
+
+</html>

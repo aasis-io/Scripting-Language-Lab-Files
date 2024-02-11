@@ -1,0 +1,26 @@
+<!-- Write a JavaScript code to display Current Date time on button click -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display Current Date and Time</title>
+</head>
+
+<body>
+    <button onclick="displayTime()">Display Date and Time</button>
+    <div id="dateTime"></div>
+    <script>
+        function displayTime() {
+            var date = new Date();
+            var dateTimeElement = document.getElementById("dateTime");
+            // Extracting only the date and time in a readable format
+            var dateTimeString = date.toLocaleString();
+            dateTimeElement.textContent = dateTimeString;
+        }
+    </script>
+</body>
+
+</html>

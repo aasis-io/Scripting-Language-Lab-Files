@@ -1,0 +1,23 @@
+<!-- Write a program to generate random number in Javascript -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Number</title>
+</head>
+
+<body>
+    <button onclick="randomNumber()">Click Me!</button>
+    <p id="box"></p>
+    <script>
+        function randomNumber() {
+            const gn = document.getElementById('box');
+            // Returns a random integer from 0 to 100:
+            gn.innerHTML = Math.floor(Math.random() * 101);
+        }
+    </script>
+</body>
+
+</html>

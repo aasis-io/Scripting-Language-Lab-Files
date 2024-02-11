@@ -1,0 +1,38 @@
+<!-- Write a program to store data in cookie using javascript -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Storage</title>
+</head>
+
+<body>
+    <h1>Cookie Storage</h1>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            document.cookie = `${name}=${value};expires=${new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString()};path=/`;
+        }
+
+        // Function to get a cookie value by name
+        function getCookie(name) {
+            const cookieValue = document.cookie.match('(^|[^;]+)\\s*' + name + '\\s*=\\s*([^;]+)');
+            return cookieValue ? cookieValue.pop() : '';
+        }
+
+        // Set a cookie
+        setCookie("username", "ashish_thapa", 30);
+        setCookie("user_id", "426622", 30);
+
+        // Retrieve and display the stored data
+        const username = getCookie("username");
+        const userId = getCookie("user_id");
+        document.write("Username: ", username, "<br>User ID: ", userId);
+    </script>
+</body>
+
+</html>

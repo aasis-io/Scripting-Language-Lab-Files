@@ -1,0 +1,74 @@
+<!-- Write a JavaScript code to display name of the day using number -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display Day Name</title>
+</head>
+
+<body>
+    <style>
+        label {
+            display: block;
+            padding-bottom: 6px;
+        }
+
+        input {
+
+            width: 250px;
+            height: 32px;
+        }
+
+        button {
+            padding: 9px 12px;
+        }
+    </style>
+    <div>
+        <label for="inputNumber">Number of Day of a Week</label>
+
+        <input type="number" id="inputNumber">
+        <button onclick="printDay()">Check</button>
+        <p style="color: rgb(8, 190, 69);" id="outputField"></p>
+
+    </div>
+
+    <script>
+        function printDay() {
+            var inputNumber = parseInt(document.getElementById("inputNumber").value);
+            var output = document.getElementById("outputField");
+            var dayName = "";
+            switch (inputNumber) {
+                case 1:
+                    dayName = "Sunday";
+                    break;
+                case 2:
+                    dayName = "Monday";
+                    break;
+                case 3:
+                    dayName = "Tuesday";
+                    break;
+                case 4:
+                    dayName = "Wednesday";
+                    break;
+                case 5:
+                    dayName = "Thursday";
+                    break;
+                case 6:
+                    dayName = "Friday";
+                    break;
+                case 7:
+                    dayName = "Saturday";
+                    break;
+                default:
+                    output.textContent = "Invalid Input";
+                    return;
+            }
+            output.textContent = "Name of the Day is " + dayName;
+        }
+    </script>
+</body>
+
+</html>

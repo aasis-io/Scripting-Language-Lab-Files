@@ -1,0 +1,78 @@
+<!-- Validate a contact form using client-side validation -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Contact Us</h2>
+    <form id="contactForm" novalidate>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error" id="nameError"></span>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <span class="error" id="messageError"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var isValid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll(".error").forEach(function (element) {
+                element.textContent = "";
+            });
+
+            // Validate name
+            if (!name) {
+                document.getElementById("nameError").textContent = "Name is required";
+                isValid = false;
+            }
+
+            // Validate email
+            if (!email) {
+                document.getElementById("emailError").textContent = "Email is required";
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById("emailError").textContent = "Invalid email format";
+                isValid = false;
+            }
+
+            // Validate message
+            if (!message) {
+                document.getElementById("messageError").textContent = "Message is required";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission if validation fails
+            }
+        });
+    </script>
+</body>
+
+</html>
