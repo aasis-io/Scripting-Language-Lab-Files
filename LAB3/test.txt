@@ -1,0 +1,1 @@
+This is an PHP example to read the content of the file!

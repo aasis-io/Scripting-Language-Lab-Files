@@ -1,0 +1,32 @@
+<!-- Write a javascript program to hide the div on mouseover. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #hideIt {
+            width: 100px;
+            height: 100px;
+            background-color: palegreen;
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+
+    <div id="hideIt"></div>
+
+    <script>
+        document.getElementById('hideIt').addEventListener('mouseover', function () {
+            document.getElementById('hideIt').style.display = 'none';
+            document.write("The box is hidden now!");
+        });
+    </script>
+</body>
+
+</html>
