@@ -21,3 +21,5 @@ $c->stop();
 ?>
 
 <!-- 1. write a program to create class and object in php -->
+
+<!--All Completed-->
