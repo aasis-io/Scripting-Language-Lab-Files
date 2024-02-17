@@ -18,7 +18,6 @@ $c = new Car(); //Object
 $c->start();
 $c->stop();
 
-
 ?>
 
 <!-- 1. write a program to create class and object in php -->
