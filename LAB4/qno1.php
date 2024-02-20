@@ -7,6 +7,10 @@ class Car
     {
         echo "The Car is started";
     }
+    function running()
+    {
+        echo "<br>The Car is running!";
+    }
     function stop()
     {
         echo "<br>The Car is stopped";
@@ -16,10 +20,11 @@ class Car
 $c = new Car(); //Object
 
 $c->start();
+$c->running();
 $c->stop();
 
 ?>
-just greennnnnnnn
+
 
 <!-- 1. write a program to create class and object in php -->
 
